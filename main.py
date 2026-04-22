@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 from dy_apis.douyin_api import DouyinAPI
 from utils.common_util import init
-from utils.data_util import handle_work_info, download_work, save_to_xlsx
+from utils.data_util import handle_work_info, download_work, save_to_xlsx, norm_str
 
 
 class Data_Spider():
@@ -64,18 +64,22 @@ class Data_Spider():
         """
         logger.info(f'爬取用户信息 {user_url} ...')
         user_info = self.douyin_apis.get_user_info(auth, user_url)
-        logger.info(f'获取用户 {user_info["user"]["nickname"]}（{user_info["user"]["unique_id"]}）作品信息 ...')
+        user_id = user_info["user"]["unique_id"]
+        nickname = user_info["user"]["nickname"]
+        
+        logger.info(f'获取用户 {nickname}（{user_id}）作品信息 ...')
         work_list = self.douyin_apis.get_user_all_work_info(auth, user_url)
         work_info_list = []
-        logger.info(f'用户 {user_info["user"]["nickname"]} 作品数量: {len(work_list)}')
-        if save_choice == 'all' or save_choice == 'excel':
-            excel_name = user_url.split('/')[-1].split('?')[0]
-
+        logger.info(f'用户 {nickname} 作品数量: {len(work_list)}')
+        # 如果excel_name为空，且保存excel文件，默认使用nickname和user_id
+        if excel_name == '' and (save_choice == 'all' or save_choice == 'excel'):
+            excel_name = norm_str(nickname)[:20] + '_' + user_id
+            
         for i, work_info in enumerate(work_list):
             work_info['author'].update(user_info['user'])
             work_info = handle_work_info(work_info)
             work_info_list.append(work_info)
-            logger.info(f'爬取作品信息 {i+1}/{len(work_list)} {user_info["user"]["nickname"]} 作品标题： {work_info["title"]}')
+            logger.info(f'爬取作品信息 {i+1}/{len(work_list)} {nickname} 作品标题： {work_info["title"]}')
             if save_choice == 'all' or 'media' in save_choice:
                 download_work(work_info, base_path['media'], save_choice)
         
