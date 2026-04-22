@@ -9,3 +9,5 @@ PyExecJS
 requests
 argparse
 websockets
+bs4
+protobuf_to_dict

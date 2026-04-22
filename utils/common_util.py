@@ -9,6 +9,11 @@ def load_env():
     load_dotenv()
     cookies_dy = os.getenv('DY_COOKIES')
     cookies_live = os.getenv('DY_LIVE_COOKIES')
+
+    if not cookies_dy and not cookies_live:
+        print("DY_COOKIES and DY_LIVE_COOKIES are empty")
+        raise ValueError("DY_COOKIES and DY_LIVE_COOKIES 未设置cookies")    
+
     from builder.auth import DouyinAuth
     dy_auth = DouyinAuth()
     dy_auth.perepare_auth(cookies_dy, "", "")

@@ -35,6 +35,7 @@ class DouyinAPI:
         max_cursor = "0"
         work_list = []
         while True:
+            logger.info(f'获取用户全部作品信息 位置:{max_cursor} ...')
             res_json = DouyinAPI.get_user_work_info(auth, user_url, max_cursor)
             if "aweme_list" not in res_json.keys():
                 break

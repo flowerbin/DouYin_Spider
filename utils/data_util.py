@@ -122,10 +122,20 @@ def save_to_xlsx(datas, file_path):
 
 def download_media(path, name, url, type):
     if type == 'image':
+        # 如果文件存在，则跳过下载
+        if os.path.exists(path + '/' + name + '.jpg'):
+            logger.info(f'图片 /{path}/{name}.jpg 已存在，跳过下载')
+            return
+        logger.info(f'下载图片 {url} ...')
         content = requests.get(url).content
         with open(path + '/' + name + '.jpg', mode="wb") as f:
             f.write(content)
     elif type == 'video':
+        # 如果文件存在，则跳过下载
+        if os.path.exists(path + '/' + name + '.mp4'):
+            logger.info(f'视频 /{path}/{name}.mp4 已存在，跳过下载')
+            return
+        logger.info(f'下载视频 {url} ...')
         res = requests.get(url, stream=True)
         size = 0
         chunk_size = 1024 * 1024
