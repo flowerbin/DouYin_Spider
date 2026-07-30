@@ -1,20 +1,49 @@
-<p align="center">
-  <a href="https://github.com/cv-cat/Douyin_Spider" target="_blank" align="center" alt="Go to Douyin_Spider Website">
-    <picture>
-      <img width="220" src="./author/logo.jpg" alt="Douyin_Spider logo">
-    </picture>
-  </a>
-</p>
 <div align="center">
-    <a href="https://www.python.org/">
-        <img src="https://img.shields.io/badge/python-3.7%2B-blue" alt="Python 3.7+">
+  <p align="center">
+    <a href="https://github.com/cv-cat/Douyin_Spider" target="_blank" align="center" alt="Go to Douyin_Spider Website">
+      <picture>
+        <img width="220" src="./author/logo.jpg" alt="Douyin_Spider logo">
+      </picture>
     </a>
-    <a href="https://nodejs.org/zh-cn/">
-        <img src="https://img.shields.io/badge/nodejs-18%2B-blue" alt="NodeJS 18+">
-    </a>
+  </p>
+  <div align="center">
+      <a href="https://www.python.org/">
+          <img src="https://img.shields.io/badge/python-3.7%2B-blue" alt="Python 3.7+">
+      </a>
+      <a href="https://nodejs.org/zh-cn/">
+          <img src="https://img.shields.io/badge/nodejs-18%2B-blue" alt="NodeJS 18+">
+      </a>
+  </div>
+  
+  # 🎶DouYin_Spider
+  
 </div>
 
-# 🎶DouYin_Spider
+
+## ❤️Sponsor
+
+> [想出现在这里？](mailto:992822653@qq.com)
+
+<details open>
+<summary>点击折叠</summary>
+
+<div align="center">
+
+[![FastAIToken](https://github.com/TheSmallHanCat/flow2api/blob/main/static/sponsors/fastaitoken-banner.png)](https://www.fastaitoken.com/register?aff=48J4VXUABAAV)
+
+</div>
+
+**FastAIToken** 是面向开发者的 AI API 聚合平台，支持 OpenAI、Claude、Gemini 等主流大模型，兼容 OpenAI API 协议，可无缝接入 **Claude Code、Codex、Gemini CLI、Cherry Studio、Cline、Continue** 等各类 AI 开发工具。平台采用 **充值 1:1（1 元 = 1 美元 API 额度）**，帮助开发者以更低成本、更高效率地使用全球领先的大模型服务。
+
+平台提供多个可选分组与公开状态页，开发者可根据成本、响应速度和稳定性自由选择不同渠道，并享受 **7×24 小时真人技术支持**（非机器人）。
+
+**主要做 AI 开发接入？可以试试 [FastAIToken](https://www.fastaitoken.com/register?aff=48J4VXUABAAV)，兼容 Codex / Claude Code / Gemini CLI 等主流工具。**
+
+
+---
+
+
+</details>
 
 **✨ 专业的抖音数据采集与交互解决方案，支持数据爬取、直播间监听、私信收发等功能**
 
@@ -151,23 +180,23 @@ python dy_apis/douyin_recv_msg.py
 
 
 ## 📈 Star 趋势
-<a href="https://www.star-history.com/#cv-cat/DouYin_Spider&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cv-cat/DouYin_Spider&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=cv-cat/DouYin_Spider&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=cv-cat/DouYin_Spider&type=Date" />
- </picture>
+
+<a href="https://cvcat.site/star-history/svg?repos=cv-cat/DouYin_Spider&type=Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cvcat.site/star-history/svg?repos=cv-cat/DouYin_Spider&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://cvcat.site/star-history/svg?repos=cv-cat/DouYin_Spider&type=Date" />
+    <img alt="Star History Chart" src="https://cvcat.site/star-history/svg?repos=cv-cat/DouYin_Spider&type=Date" />
+  </picture>
 </a>
 
 
+
 ## 🍔 交流群
-如果你对爬虫和ai agent感兴趣，请加作者主页wx通过邀请加入群聊
 
-ps: 请加群7，人满或者过期 issue | wx 提醒
+如果你对爬虫和 AI Agent 感兴趣，请加作者主页 wx 通过邀请加入群聊
 
-![group7](https://github.com/cv-cat/Spider_XHS/blob/master/author/group7.jpg)
+ps: 请加群，人满或者过期 issue | wx 提醒
 
-
-
-
-
+| group-1 | group-2 | group-3 |
+|:--:|:--:|:--:|
+| <img width="280" alt="group1" src="https://cvcat.site/assets/group1.jpg" /> | <img width="280" alt="group2" src="https://cvcat.site/assets/group2.jpg" /> | <img width="280" alt="group3" src="https://cvcat.site/assets/group3.jpg" /> |
