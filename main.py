@@ -64,9 +64,8 @@ class Data_Spider():
         """
         logger.info(f'爬取用户信息 {user_url} ...')
         user_info = self.douyin_apis.get_user_info(auth, user_url)
-        user_id = user_info["user"]["unique_id"]
+        user_id = user_info["user"]["uid"]
         nickname = user_info["user"]["nickname"]
-        
         logger.info(f'获取用户 {nickname}（{user_id}）作品信息 ...')
         work_list = self.douyin_apis.get_user_all_work_info(auth, user_url)
         work_info_list = []
@@ -147,7 +146,7 @@ if __name__ == '__main__':
     user_urls = [
         # 'https://www.douyin.com/user/MS4wLjABAAAAbXcIbwLplmhYGuXld_zvZw5D_Qe6vh55nVC-c-j8evMUwRSLCoJAPDP4DUkH4os3',
         # 'https://www.douyin.com/user/MS4wLjABAAAAC-b3n2d6ZFA455g679GX19UArDYKTiE0XTcxdHxPEftfpRFuvK8lNAVO5vqyH7hy?from_tab_name=main',
-        'https://www.douyin.com/user/MS4wLjABAAAAXqbjCnHvvZRed6nem8E7aNJRa21V_HjbS6eEQ_WMhwA?from_tab_name=main',
+        'https://www.douyin.com/user/MS4wLjABAAAAtdYUrvIEmbDFhaDUnENzuiufHU2kJrWNn_khoATAiY0?showSubTab=video',
     ]
     
     for i, user_url in enumerate(user_urls):
@@ -166,9 +165,9 @@ if __name__ == '__main__':
 
     # data_spider.spider_some_search_work(auth, query, require_num, base_path, 'all', sort_type, publish_time, filter_duration, search_range, content_type)
 
-    # 4 私信：用户链接转 uid 后建对话发一条
-    user_url = 'https://www.douyin.com/user/MS4wLjABAAAAaB23ankxsw7PIgXnKxCcLC9iJIadZMQQpS-KWVO8Y306zOksK9cUvT5QdoOIcsS6?from_tab_name=live'
-    content = "在吗"
-    to_user_id = DouyinAPI.get_user_info(auth, user_url)['user']['uid']
-    conversation_id, conversation_short_id, ticket = DouyinAPI.create_conversation(auth, to_user_id)
-    DouyinAPI.send_msg(auth, conversation_id, conversation_short_id, ticket, content)
+    # # 4 私信：用户链接转 uid 后建对话发一条
+    # user_url = 'https://www.douyin.com/user/MS4wLjABAAAAaB23ankxsw7PIgXnKxCcLC9iJIadZMQQpS-KWVO8Y306zOksK9cUvT5QdoOIcsS6?from_tab_name=live'
+    # content = "在吗"
+    # to_user_id = DouyinAPI.get_user_info(auth, user_url)['user']['uid']
+    # conversation_id, conversation_short_id, ticket = DouyinAPI.create_conversation(auth, to_user_id)
+    # DouyinAPI.send_msg(auth, conversation_id, conversation_short_id, ticket, content)
